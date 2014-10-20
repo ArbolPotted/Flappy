@@ -29,7 +29,7 @@ public class jumpScript : MonoBehaviour {
 		{    
 			var v = new Vector2(0,0);
 			
-			rigidbody2D.velocity = v; //AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+			rigidbody2D.velocity = v; AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			jump = false;
 			
@@ -40,7 +40,7 @@ public class jumpScript : MonoBehaviour {
 	{
 		if(!GameControl.dead){
 			GameControl.dead = true;
-			//AudioSource.PlayClipAtPoint(deadSound, transform.position);
+			AudioSource.PlayClipAtPoint(deadSound, transform.position);
 			//anim.SetBool("dead",true);
 			rigidbody2D.gravityScale = 4;
 		}
