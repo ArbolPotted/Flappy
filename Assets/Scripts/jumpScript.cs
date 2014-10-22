@@ -41,7 +41,7 @@ public class jumpScript : MonoBehaviour {
 		if(!GameControl.dead){
 			GameControl.dead = true;
 			AudioSource.PlayClipAtPoint(deadSound, transform.position);
-			//anim.SetBool("dead",true);
+			//anim.SetBool("muerte",true);
 			rigidbody2D.gravityScale = 4;
 		}
 	}
