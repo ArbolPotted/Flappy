@@ -19,7 +19,7 @@ public class generadorColumnas : MonoBehaviour {
 	void Update () {
 
 		if (Time.time > timer) {
-			var altura = Random.Range(-1.5f, 6f);
+			var altura = Random.Range(-1f, 6f);
 
 			var nuevacolumna = (GameObject) Instantiate(
 				columna,
