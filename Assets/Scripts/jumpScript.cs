@@ -11,9 +11,9 @@ public class jumpScript : MonoBehaviour {
 	
 	// Use this for initialization
 	
-	//Animator anim;
+	Animator anim;
 	void Start () {
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class jumpScript : MonoBehaviour {
 		if(Input.GetButtonDown("Jump") && !GameControl.dead){
 			jump = true;
 		}
-		//anim.SetBool("jump",jump);
+		anim.SetBool("jump",jump);
 	}
 	
 	void FixedUpdate() {
@@ -41,7 +41,7 @@ public class jumpScript : MonoBehaviour {
 		if(!GameControl.dead){
 			GameControl.dead = true;
 			AudioSource.PlayClipAtPoint(deadSound, transform.position);
-			//anim.SetBool("muerte",true);
+			anim.SetBool("muerte",true);
 			rigidbody2D.gravityScale = 4;
 		}
 	}

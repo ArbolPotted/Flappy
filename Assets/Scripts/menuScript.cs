@@ -23,6 +23,8 @@ public class menuScript : MonoBehaviour {
 
 	public void restart(){
 		animacion_panel.SetBool ("muestraMenu", false);
+		GameControl.dead = false;
+		GameControl.score = 0;
 		Application.LoadLevel(Application.loadedLevel);
 	}
 	public void quit(){

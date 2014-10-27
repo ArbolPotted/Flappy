@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class scoreUp : MonoBehaviour {
 
 	private Text texto;
+	private Text menu;
 
 	void Start(){
 		texto = GameObject.Find ("TextoNivel").GetComponent<Text>();
+		menu = GameObject.Find ("nivelFinal").GetComponent<Text>();
 
 		}
 
@@ -16,6 +18,7 @@ public class scoreUp : MonoBehaviour {
 		//Debug.Log (GameControl.score);
 
 		texto.text = "Level " + GameControl.score.ToString ();
+		menu.text = "Score " + GameControl.score.ToString ();
 		}
 
 }
